@@ -1,0 +1,27 @@
+@import "../../partials/variables";
+@import "../../partials/mixins";
+@import "../../partials/typography";
+
+
+
+* {
+    font-family: "Nunito";
+
+    @include reset-margin-border-box;
+
+    &:before {
+        @include reset-margin-border-box;
+    }
+    &:after {
+        @include reset-margin-border-box;
+    }
+}
+
+
+a {
+    text-decoration: none;
+}
+
+li {
+    @include reset-list;
+}

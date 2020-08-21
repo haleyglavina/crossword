@@ -5,7 +5,7 @@ function Footer(props) {
     return (
         <footer className="footer">
             <div>
-            <p>Crossword Puzzle. Made by Halley Galvina & Lumi Ciobanu</p>
+            <p>CrossWord Puzzle. Made by Halley Galvina & Lumi Ciobanu</p>
             </div>
         </footer>
         

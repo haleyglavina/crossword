@@ -1,6 +1,12 @@
-* {
-    box-sizing: border-box;
-}
+@import "../../partials/variables";
+@import "../../partials/mixins";
+@import "../../partials/global";
+
+
+
+// * {
+//     box-sizing: border-box;
+// }
 
 .cell {
     margin: 0;
@@ -22,4 +28,17 @@
 }
 form {
     display: block;
+}
+
+.button__submit {
+    background-color: $accent-color;
+    color: $white-color;
+    letter-spacing: 1px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 0;
+    cursor: pointer;
+    text-transform: uppercase;
+    
+    
 }

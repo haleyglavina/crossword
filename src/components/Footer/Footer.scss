@@ -1,0 +1,10 @@
+@import "../../partials/variables";
+@import "../../partials/mixins";
+@import "../../partials/global";
+
+.footer {
+    background-color: $main-color;
+    padding: 1rem;
+    color: $white-color;
+    text-align: center;
+}
