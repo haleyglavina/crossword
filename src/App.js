@@ -1,5 +1,6 @@
 import React from 'react';
 import Board from './components/Board/Board';
+import Hints from './components/Hints/Hints';
 import './App.css';
 
 function App() {
@@ -7,6 +8,7 @@ function App() {
     <>
       <main>
         <Board />
+        <Hints />
       </main>
     </>
   );

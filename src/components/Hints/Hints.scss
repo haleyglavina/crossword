@@ -1,0 +1,63 @@
+@import '../../partials/variables';
+
+.logo-box {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin-bottom: 2.5rem;
+}
+
+.logo {
+    width: 300px;
+}
+
+.hints {
+    &__box {
+        background-color: $main-1;
+        border-radius: $border-radius;
+    }
+
+    &__direction {
+        padding: 1rem;
+    }
+
+    &__subtitle {
+        width: 100%;
+        text-align: center;
+        color: white;
+        font-family: $fancy-font;
+        letter-spacing: 2px;
+    }
+
+    &__ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    &__li {
+        font-size: 0.8rem;
+        color: white;
+    }
+
+    &__box {
+        display: flex;
+    }
+
+    &__number {
+        font-weight: bold;
+        color: $main-accent;
+        font-size: 1rem;
+    }
+}
+
+.foot {
+    margin-top: 2rem;
+    &__info {
+        width: 100%;
+        text-align: center;
+        color: white;
+        font-size: 0.8rem;
+        margin-bottom: 0.5rem;
+    }
+}

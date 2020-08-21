@@ -407,7 +407,9 @@ class Board extends React.Component {
     return (
       <form onSubmit={this.submitHandler} autoComplete="off">
         {rowsInBoard}
-        <button type="submit">Submit all</button>
+        <div class="btn-box">
+          <button className="btn" type="submit">Submit all</button>
+        </div>
       </form>
       );
   }
