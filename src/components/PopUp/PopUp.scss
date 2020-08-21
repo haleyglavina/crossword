@@ -1,0 +1,84 @@
+@import '../../partials/variables';
+
+$modal-height: 30rem;
+$modal-width: 25rem;
+
+.modal-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 3;
+    background-color: rgba(black, 0.3);
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+}
+
+.modal {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    z-index: inherit;
+    width: $modal-width;
+    background-color: $main-1;
+    position: relative;
+
+    &__decor {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 100%;
+        width: 50%;
+    }
+
+    &__img {
+        height: 75%;
+        align-self: center;
+    }
+
+    &__text {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 100%;
+        width: 50%;
+        color: white;
+    }
+
+    &__heading {
+        z-index: inherit;
+        margin: 0.5rem 0;
+        font-family: $fancy-font;
+        color: $main-accent;
+        text-align: center;
+    }
+
+    &__description {
+        max-width: 18rem;
+        font-weight: 100;
+        line-height: 1.5rem;
+    }
+}
+.close {
+    position: absolute;
+    top: $modal-height;
+
+    &__button {
+        color: white;
+        background-color: $main-accent;
+        border-radius: 40px;
+        padding: 1rem;
+        border: none;
+        font-size: 1.2rem;
+        font-weight: 100;
+
+        &:hover {
+            background-color: white;
+            color: black;
+        }
+    }
+}

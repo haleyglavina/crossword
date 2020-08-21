@@ -169,15 +169,12 @@ class Board extends React.Component {
     gameState: 'PLAYING'
   }
 
-  //popUp = this.props.popUp;
+  popUp = this.props.popUp;
 
-  submitHandler(e) {
+
+  submitHandler = (e) => {
     e.preventDefault();
     const errors = [];
-    // compare all the cells to solution
-    // if correct, change gameState and trigger a pop-up saying congrats
-    // if incorrect, change gameState and trigger pop-up saying try again
-    // ***note: im not sure if we actually need to change game state here...
     
     // Check board!
     if (e.target.r0c4.value.toLowerCase() === 'g'
@@ -420,7 +417,7 @@ class Board extends React.Component {
     }
 
     // Send list of wrong answers to popUp function from App.js
-    //this.popUp(errors);
+    this.popUp(errors);
 
     return;
   }
