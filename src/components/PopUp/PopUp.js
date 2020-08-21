@@ -1,4 +1,5 @@
 import React from 'react';
+import happyDaniil from '../../assets/daniil-emoji.png';
 import './PopUp.scss';
 
 class PopUp extends React.Component {
@@ -14,6 +15,7 @@ class PopUp extends React.Component {
     render() {
         if (this.props.firstRender || !this.state.open)
             return (null);
+            
         else if (this.props.won) {
             console.log("you won");
             return (
@@ -21,6 +23,7 @@ class PopUp extends React.Component {
                 <div className="modal">
                     <div className="modal__text">
                         <h1 className="modal__heading">Congrats you won!</h1>
+                        <img width="100" src={happyDaniil}></img>
                     </div>
                     <div className="close">
                         <button className="close__button" onClick={this.closeModal}>CLOSE</button>
