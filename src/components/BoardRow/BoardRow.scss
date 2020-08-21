@@ -2,3 +2,19 @@
     display: flex;
     align-items: center;
 }
+
+.input-cell__wrapper {
+    position: relative;
+}
+
+.input-cell__number {
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    font-size: 0.5rem;
+    width: inherit;
+    height: inherit;
+    color: #666;
+    z-index: 2;
+
+}

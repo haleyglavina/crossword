@@ -20,6 +20,7 @@
     &--input {
         text-align: center;
         font-size: 1.5rem;
+        position: relative;
     }
 }
 
@@ -40,7 +41,7 @@ form {
 
 
     &:hover {
-        opacity: 0.8;
+        background-color: white;
     }
 }
 

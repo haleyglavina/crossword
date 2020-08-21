@@ -169,8 +169,11 @@ class Board extends React.Component {
     gameState: 'PLAYING'
   }
 
+  //popUp = this.props.popUp;
+
   submitHandler(e) {
     e.preventDefault();
+    const errors = [];
     // compare all the cells to solution
     // if correct, change gameState and trigger a pop-up saying congrats
     // if incorrect, change gameState and trigger pop-up saying try again
@@ -187,6 +190,7 @@ class Board extends React.Component {
       && e.target.r7c4.value.toLowerCase() === 'u')
         console.log("GOOGLEFU is correct!");
     else {
+      errors.push("1 down");
       console.log("1 down is wrong...");
     }
 
@@ -202,6 +206,7 @@ class Board extends React.Component {
       && e.target.r2c12.value.toLowerCase() === 'y')
         console.log("HOWDYDOODY is correct!");
     else {
+      errors.push("2 across");
       console.log("2 across is wrong...");
     }
 
@@ -211,6 +216,7 @@ class Board extends React.Component {
       && e.target.r4c5.value.toLowerCase() === 'k')
         console.log("TALK is correct!");
     else {
+      errors.push("3 across");
       console.log("3 across is wrong...");
     }
 
@@ -222,6 +228,7 @@ class Board extends React.Component {
       && e.target.r5c11.value.toLowerCase() === 'n')
         console.log("SALMON is correct!");
     else {
+      errors.push("4 across");
       console.log("4 across is wrong...");
     }
 
@@ -237,6 +244,7 @@ class Board extends React.Component {
       && e.target.r14c6.value.toLowerCase() === 'e')
         console.log("SUPPORTIVE is correct!");
     else {
+      errors.push("4 down");
       console.log("4 down is wrong...");
     }
 
@@ -255,6 +263,7 @@ class Board extends React.Component {
       && e.target.r8c14.value.toLowerCase() === 'a')
         console.log("SPA is correct!");
     else {
+      errors.push("6 down");
       console.log("6 down is wrong...");
     }
 
@@ -266,6 +275,7 @@ class Board extends React.Component {
       && e.target.r7c7.value.toLowerCase() === 'y')
         console.log("GRUMPY is correct!");
     else {
+      errors.push("7 across");
       console.log("7 across is wrong...");
     }
 
@@ -281,6 +291,7 @@ class Board extends React.Component {
       && e.target.r16c10.value.toLowerCase() === 'l')
         console.log("EVIL DANIIL is correct!");
     else {
+      errors.push("8 down");
       console.log("8 down is wrong...");
     }
 
@@ -292,6 +303,7 @@ class Board extends React.Component {
       && e.target.r7c17.value.toLowerCase() === 'p')
         console.log("SIP SIP is correct!");
     else {
+      errors.push("9 across");
       console.log("9 across is wrong...");
     }
 
@@ -306,6 +318,7 @@ class Board extends React.Component {
       && e.target.r15c12.value.toLowerCase() === 's')
         console.log("SMALL WINS is correct!");
     else {
+      errors.push("9 down");
       console.log("9 down is wrong...");
     }
 
@@ -321,6 +334,7 @@ class Board extends React.Component {
       && e.target.r17c8.value.toLowerCase() === 'n')
         console.log("BACKGAMMON is correct!");
     else {
+      errors.push("10 down");
       console.log("10 down is wrong...");
     }
 
@@ -337,6 +351,7 @@ class Board extends React.Component {
       && e.target.r9c13.value.toLowerCase() === 'l')
         console.log("AUTOMAGICAL is correct!");
     else {
+      errors.push("11 across");
       console.log("11 across is wrong...");
     }  
     
@@ -345,6 +360,7 @@ class Board extends React.Component {
       && e.target.r12c1.value.toLowerCase() === 't')
         console.log("CAT is correct!");
     else {
+      errors.push("12 down");
       console.log("12 down is wrong...");
     }
 
@@ -357,6 +373,7 @@ class Board extends React.Component {
       && e.target.r11c6.value.toLowerCase() === 't')
         console.log("HARDEST is correct!");
     else {
+      errors.push("13 across");
       console.log("13 across is wrong...");
     }
 
@@ -366,6 +383,7 @@ class Board extends React.Component {
       && e.target.r12c15.value.toLowerCase() === 'd')
         console.log("WILD is correct!");
     else {
+      errors.push("14 across");
       console.log("14 across is wrong...");
     }
 
@@ -375,6 +393,7 @@ class Board extends React.Component {
       && e.target.r16c4.value.toLowerCase() === 'e')
         console.log("TIME is correct!");
     else {
+      errors.push("15 down");
       console.log("15 down is wrong...");
     }
 
@@ -387,6 +406,7 @@ class Board extends React.Component {
       && e.target.r14c6.value.toLowerCase() === 'e')
         console.log("OFFLINE is correct!");
     else {
+      errors.push("14 across");
       console.log("14 across is wrong...");
     }
 
@@ -395,8 +415,12 @@ class Board extends React.Component {
       && e.target.r17c8.value.toLowerCase() === 'n')
         console.log("PUN is correct!");
     else {
+      errors.push("17 across");
       console.log("17 across is wrong...");
     }
+
+    // Send list of wrong answers to popUp function from App.js
+    //this.popUp(errors);
 
     return;
   }
